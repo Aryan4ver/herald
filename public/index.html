@@ -1,19 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <title>Herald</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/png" href="/images/favicon.png" />
-<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap&subset=latin-ext" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/styles.css"/>
+<script type="text/javascript">	
+  if(typeof colombia == 'undefined')
+  {
+    var colombia = colombia || {};
+    colombia.fns = colombia.fns || [];
+    (function() {
+        var cads = document.createElement("script");
+        cads.async = true;
+        cads.type = "text/javascript";
+        cads.src = "//static.clmbtech.com/ctn/commons/js/colombia_v2.js";
+        var node = document.getElementsByTagName("script")[0];
+        node.parentNode.insertBefore(cads, node);
+    })();
+  }
+</script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ34LZ6');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ34LZ6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <div id="app"></div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="/bundle.js"></script>
 </body>
-
+<script>
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 300 ) {
+      $('.scrolltop:hidden').stop(true, true).fadeIn();
+    } 
+    else 
+    {
+      $('.scrolltop').stop(true, true).fadeOut();
+    }
+  });
+  /*$(function(){
+    $(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");
+    return false})
+  });*/
+</script>
 </html>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
