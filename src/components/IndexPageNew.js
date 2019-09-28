@@ -13,6 +13,7 @@ import ColumnTwo from './ColumnTwo';
 import ColumnThree from './ColumnThree';
 import ColumnFour from './ColumnFour';
 import SEO from './Seo';
+import IndexLayout from './IndexLayout';
 import RightSide from './RightSide';
 import Cookies from 'universal-cookie';
 
@@ -32,6 +33,7 @@ class IndexPage extends React.Component {
           column_two: [],
           column_three: [],
           column_four: [],
+          column_five: [],
           loading: false
         };
       }
@@ -50,7 +52,7 @@ class IndexPage extends React.Component {
           }).then(function (response) {
             return response.json();
           }).then(function (result) {
-            that.setState({ seo: result.seo, mainslide: result.mainslide, topnews: result.topnews, cafe: result.cafe, idharUdhar: result.idharUdhar, column_one: result.column_one, column_two: result.column_two, column_three: result.column_three, column_four: result.column_four, loading: false });
+            that.setState({ seo: result.seo, mainslide: result.mainslide, topnews: result.topnews, cafe: result.cafe, idharUdhar: result.idharUdhar, column_one: result.column_one, column_two: result.column_two, column_three: result.column_three, column_four: result.column_four, column_five: result.column_five, loading: false });
           });
         }
       }
@@ -59,45 +61,28 @@ class IndexPage extends React.Component {
           const tagCookie = (cookies.get('heraldTags'))?cookies.get('heraldTags'):'';
           console.log(tagCookie);
           this.state.loading = true;
-          this.fetchFirst("index-api.php",tagCookie);
+          this.fetchFirst("index-api2.php",tagCookie);
           window.scrollTo(0, 0);
       }
 
     render() { 
       return (
         <div>
-        <SEO seo={this.state.seo}/>
-        <div className="news-content">
-          <div className="container">
-            { this.state.topnews.length > 0 && <TopNewsCarousel topnews={this.state.topnews} />}
-            <div className="top-spacer">
-              <div className="col-6" id="main-col">
+          <SEO seo={this.state.seo}/>
+          <div className="news-content">
+            <div className="container">
+              { this.state.topnews.length > 0 && <TopNewsCarousel topnews={this.state.topnews} />}
+              <div className="top-spacer">
                 { this.state.topnews.length > 0 && <MobileTopNews topnews={this.state.topnews} />}
                 <div className="news-list">
-                  <div className="col-6"> { this.state.column_one.length > 0 && <ColumnOne column_one={this.state.column_one} />} </div>
-                  <div className="col-6"> { this.state.column_two.length > 0 && <ColumnTwo column_two={this.state.column_two} />} </div>
-                  <div className="clear"></div>
+                  <IndexLayout cafe={this.state.cafe}  idharUdhar={this.state.idharUdhar} data={this.state.column_five}/>
+                  <div class="clear"></div>
                 </div>
               </div>
-              <div className="col-3" id="main-col">
-                { /*this.state.topnews.length > 0 && <TopNews topnews={this.state.topnews} />*/}
-                <Twitter />
-                { this.state.cafe.length > 0 && <Cafe cafe={this.state.cafe} /> }
-                
-                { this.state.idharUdhar.length > 0 && <IdharUdhar idharUdhar={this.state.idharUdhar} /> }
-                
-                { this.state.column_three.length > 0 && <ColumnThree column_three={this.state.column_three} /> } 
-              </div>
-              <div className="col-3" id="main-col">
-                <RightSide />
-                { this.state.column_four.length > 0 && <ColumnFour column_four={this.state.column_four} /> } 
-              </div>
-            </div>
-              <div className="clear"></div>
+              <div class="clear"></div>
             </div>
           </div>
-        </div>
-        
+        </div>  
       );
     }
 }

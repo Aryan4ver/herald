@@ -1,0 +1,64 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import RightSide from './RightSide';
+
+class AboutUsPage extends React.Component {
+
+    render() { 
+        return (
+            <div className="news-content" id="citizen-page">
+                <div className="container">
+                    <div className="col-9">
+                    <div className="newsletter-box static-content">
+                        <div className="tag-inner">Terms of Use</div>
+                        <ul className="list">
+                            <li><p>The advertisements released by the advertising agencies, whether accredited or nonaccredited, would be deemed to be on principal-to-principal basis</p></li>
+                            <li><p>In the event of any printing mistake, omission or non-publication of advertisement, the advertising agencies shall have to furnish instructions on behalf of their clients for republication. In the event of a dispute, the liability of the Management shall be restricted to the amount received against sale of space for advertisement released.</p></li>
+                            <li><p>The advertisements shall be certified to be non-infringing any statutory restraints/constraints by the client and/ agency.</p></li>
+                            <li><p>The advertisements released shall be subject to acceptance of the Management.</p></li>
+                            <li><p>The Management reserves the right to reject or withhold any advertisement without assigning any reason.</p></li>
+                            <li><p>The Management accepts no responsibility whatsoever for not publishing advertisement, the copy and instructions relating to which do not conform to the Tariff Card and/or to these General Terms, for acceptance of the advertisement.</p></li>
+                            <li><p>In respect of classified advertisements, the rates applicable to Advertising Agencies shall be chargeable as laid down in the rate card even if these are different from the rates charged for the advertisements received at the Classified Advertisement Booking Counters of the Management.</p></li>
+                            <li><p> The Management shall have absolute right to omit, suspend, change the position or the scheduled date of publication of any advertisement received for insertions. Every effort, however, shall be made to publish the advertisement on the desired date of publication but Management shall shave the right to prepone or postpone the publication of the advertisement.</p></li>
+                            <li><p>No particular page or position will be guaranteed by the agency to its clients for any advertisement unless the extra charge is paid for the same. If an advertisement for which a special position or page has been desired and paid for, is not published or is published on a page or in a position, not in accordance with the request, the said insertion shall be charged at the rate applicable to the position or page on which it is printed .</p></li>
+                            <li><p> The transaction of publication of an advertisement shall be one of sale of 'space' in the particular publication(s) for which advertisement(s) is/are requested to be published.</p></li>
+                            <li><p> The Management shall not be bound by notice of stop orders, cancellations, preponements/ postponements or alterations/deletions/additions in the material(s) of advertisement(s) booked for publication in special or specified position if received less than one week prior to the dates of insertion. For ordinary advertisement the stoppage or cancellation instructions must reach at least four days before the scheduled date of the publication of the advertisement.</p></li>
+                            <li><p> The Management accepts no liability for any loss or damage caused by an error or inaccuracy in the printing or omission to insert an advertisement.</p></li>
+                            <li><p> The management shall not be held responsible for not bringing out any particular issue of the newspaper or for faulty printing due to defective material(s) supplied or due to circumstances beyond its control.</p></li>
+                            <li><p> While every endeavour will be made by the Management to avoid publication of competitive advertisements in close proximity to one another, no guarantee can be given in this respect, nor will claims be entertained for free insertions in the event of advertisements of rival products appearing on the same page. The publication of competitive advertisement on special pages /positions cannot be avoided.</p></li>
+                            <li><p> No deduction is allowed from bills raised against publication of advertisement (s) on account of any defective insertions. Claims in these respects, if admitted, will be met by publishing a corrigendum /free insertion or the like depending upon the merits of the claim vis-à-vis the error in publishing the advertisements(s) or other materials. Claims for refund or for compensation, if admitted shall be restricted to the charges for advertisement received by the Management.</p></li>
+                            <li><p> The Management accepts no responsibility for any damage to or loss of any Art Work/ Art Pull/ Bromide/ Positive/ Drawing etc. supplied for the purpose for advertising though reasonable care would be observed to preserve the same.</p></li>
+                            <li><p> The placing of an order by an advertising agency constitutes a warranty by the Agency to the Management that the agency has secured necessary authority and permission in respect of the use in the advertisement or advertisements of pictorial representation and/ or statement of /or, purporting to be of living/dead person(s) and all references to words attributed applicable, referable, referable or relating to living/dead persons.</p></li>
+                            <li><p> The advertising agency releasing an advertisement on behalf of its client shall be deemed to have undertaken to keep the Management indemnified in respect of costs, damage or other charges incurred by the management as a result of any legal action or threatened legal action arising from and in relation to publication of any advertisement published in accordance with the release order and the copy instructions supplied by the agency.</p></li>
+                            <li><p> Any claim or objection in relation to any charge included in the bill raised against publication of an advertisement(s) received for publication will not be entertained unless it is produced within 15 days of the receipt of the bill in writing, subject to the clearance/ remittance of the undisputed amount of the bill, where after the Management shall inquire into the claim/ objection and if found valid shall rectify the same. The agency shall not be entitled to withhold or adjust or set-off charges payable in respect of any other bill/s regularly or to comply with these General Terms and the terms of the Tariff Card or those specified on the order forms/bills, the Management shall be at liberty to suspend the publication of advertisement/s released by the said agency and proceed to recover the amount forthwith. Continuing to entertain and publish advertisement/s received from the said agency in default, shall not constitute waiver or condonation of the rights of the Management to recover its dues in due course of law.</p></li>
+                            <li><p> The agency shall bring to the notice of its clients these General Terms applicable to the agency and it shall not be open to any of its clients to plead/claim or aver ignorance of these General Terms which apply to every transaction of sale of space in particular issue(s) of any of the publications of the Management.</p></li>
+                            <li><p> The placing of an order for the insertion of an advertisement shall amount to acceptance of the conditions laid down herein and any conditions stipulated by an Agency or specified on its Release Order form or elsewhere shall not be binding on the Management and the Management shall not be obliged to reject these specifically while accepting the release by the Agency of advertising material(s).</p></li>
+                            <li><p> The terms embodied in the declaration, application for accreditation, agreement between Indian Newspaper Society and the Advertising Agency and Regulations governing the accreditation shall be deemed to form part of these General Terms for Acceptance of Advertisement except such terms rules of Model Agreements(s) as are not specifically agreed upon in writing by the Management.</p></li>
+                            <li><p> Any claim /dispute or differences arising out of or in relation to the release of advertisements, terms of advertisement etc. or pertaining to the General Terms and Conditions specified herein concerning the 'Herald Publications Pvt Ltd.’ shall be subject to the exclusive jurisdiction of the Courts in Panaji-Goa and none others.</p></li>
+                            <li><p> No agency commission is payable on ordinary classified advertisements and on self advertisement of the advertising agencies.</p></li>
+                            <li><p> Every advertisement material should bear a distinct Key No. and this Key No. should be given on the Release Order. When adaptations of the advertisement are produced with variation in size, illustration, headline, or copy matter etc. a different Key No. should be given to such adaptations. Revised material should also be produced with a new Key No.</p></li>
+                            <li><p> Standing or running instructions are not accepted and instructions must be clear and specific, quoting reference of previous release order and scheduled dates of insertions in respect of which the instructions are given. The instructions should be given afresh with every subsequent release order scheduling the advertisements(s).</p></li>
+                            <li><p> In the case of any material published previously with some correction, addition, alteration or deletion, necessary instructions about these should be given in the release order whenever the insertion is scheduled subsequently. It is not enough to merely mention the repeat date.</p></li>
+                            <li><p> Fraction of a centimetre in excess of the scheduled size shall be charged as full centimetre if the advertisement exceeds the scheduled size. If the material supplied is shorter than the scheduled size, the advertisement will be charged for the size scheduled and not for the actual space occupied or consumed by the advertisement on the basis of the short size material so supplied.</p></li>
+                            <li><p> All disputes/ claims regarding advertisements complaints must be made within one month of the date of publication.</p></li>
+                            <li><p> The amount of invoice will be rounded off to the nearest rupee.</p></li>
+                            <li><p> Cancellation charges of 10% will be levied if material deadline is not adhered to.</p></li>
+                            <li><p> Cancellation charges of 10% will be levied on front page solus advertisements if cancelled before 72 hours of publication, for other positions before 24 hours of publication. </p></li>
+                            <li><p> These are the prevalent applicable advertisement rates. As and when they are revised, the same would be applicable.</p></li>
+                            <li><p> Each and every term and condition mentioned herein forming the 'general terms and conditions' shall be automatically applicable and shall govern the terms and conditions for every advertisement carried out in the Herald Group Publications and ignorance of these terms and conditions shall be no defence and cannot be a ground for non-applicability of these general terms and conditions .</p></li>
+                            <li><p> The Advertiser / Advertising Agency shall ensure that the advertisement given for publication does not impinge or violate any law, rules, regulation or any authority having the force of law and in case of any infringement or violation of laws, regulations etc. the Advertiser / advertising agency shall be wholly and solely responsible .</p></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <div className="col-3" >
+                        <RightSide/>
+                    </div>
+                    <div className="clear"></div>
+                </div>
+            </div>
+        )
+    }
+};
+
+export default AboutUsPage;
