@@ -50,7 +50,7 @@ module.exports = (env) => {
         }]
       },
       plugins: [
-        CSSExtract
+        CSSExtract,
       ],
       devtool: isProduction ? 'source-map' : 'inline-source-map',
       devServer: {
